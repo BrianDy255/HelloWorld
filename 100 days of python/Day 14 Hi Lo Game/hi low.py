@@ -1,7 +1,7 @@
 import art
 
 print(art.logo)
-import game_data
+from game_data import data
 import random
 
 # take the first random person from the list to compare against the next person on the list
@@ -11,13 +11,13 @@ import random
 # Create a variable that keeps track of the score or "count" of how many times the user gets correct.
 
 # Randomize the first comparison and assign it a new variable
-compare_a = random.choice(game_data.data)
+compare_a = random.choice(data)
 
 # randomize the second comparison and assign to another variable
-compare_b = random.choice(game_data.data)
+compare_b = random.choice(data)
 
 def get_random_account():
-    return random.choice(game_data.data)
+    return random.choice(data)
 
 
 def format_name(compare_a, compare_b):
@@ -35,10 +35,10 @@ score = 0
 def hi_low(compare_a, compare_b, score):
     while True:
         #Randomizes "B" after chosing the right answer
-        compare_b = random.choice(game_data.data)
+        compare_b = random.choice(data)
         #If A happens to == B, get another random choice for B
         if compare_a == compare_b:
-            compare_b = random.choice(game_data.data)
+            compare_b = random.choice(data)
         format_name(compare_a, compare_b)
         follower1 = compare_a['follower_count']
         follower2 = compare_b['follower_count']
