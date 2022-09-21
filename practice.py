@@ -1,5 +1,5 @@
-def multiply(num_1, num_2):
-    total = num_1 * num_2
-    return total
+list = [1,2,3,4,5,6,7]
 
-print(multiply(3,4))
+for i in list:
+    list.pop()
+    print(list)
